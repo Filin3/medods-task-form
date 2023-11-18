@@ -1,0 +1,30 @@
+@import "colors.scss";
+
+body {
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@mixin overflow-scroll($color, $thickness: 5px) {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: $thickness;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 0.3rem;
+  }
+}
